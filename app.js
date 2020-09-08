@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 
+
 /**
  * Required External Modules
  */
@@ -14,10 +15,33 @@ const dotenv = require('dotenv');
  * App Variables
  */
 
-const app = express();
-app.use(bodyParser.json())
 dotenv.config();
 const port = process.env.PORT || "8000";
+
+const app = express();
+app.use(bodyParser.json())
+
+var routes = require('./routes/index');
+app.use('/', routes);
+
+// catch 404 and forward to error handler
+// this matches all routes and all methods
+app.use(function(req, res, next) {
+  var err = new Error('Sorry, the requested page is Not Found.');
+  err.status = 404;
+  next(err);
+});
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) { 
+  res.status(err.status || 500);
+  console.log(res.locals.error)
+  res.render('error', {
+    message: err.message,
+    error: (app.get('env') === 'development' ? err : {}) // no stacktraces leaked to user
+  });
+});
 
  /**
  *  App Configuration
@@ -29,13 +53,13 @@ app.set("view engine", "pug");
 // Telling the app to use the public folder to serve our files is a nice and clean way to manage our site assets
 app.use(express.static(path.join(__dirname, 'public')));
 
- /**
+/**
  * Routes Definitions
  */
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
-});
+// app.get("/", (req, res) => {
+//   res.render("index", { title: "Home" });
+// });
 
 
 /**

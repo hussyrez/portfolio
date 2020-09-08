@@ -1,2 +1,2 @@
 # portfolio
-Personal website build in NodeJS
+Simple portfolio in NodeJS.

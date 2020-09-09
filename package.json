@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/hussyrez/portfolio.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "portfolio",
+    "blog"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

@@ -32,6 +32,16 @@ block layout-content
                 .divider-custom-line
             // Masthead Subheading
             p.masthead-subheading.font-weight-light.mb-0 Software Engineer - Frontend Developer - Backend Developer
+            // Footer Social Icons
+            .col-lg-4.mb-5.mb-lg-0
+                a.btn.btn-outline-light.btn-social.mx-1(href='https://github.com/hussyrez', onclick="window.open('https://github.com/hussyrez'); return false;")
+                    i.fab.fa-fw.fa-github
+                //- a.btn.btn-outline-light.btn-social.mx-1(href='https://github.com/hussyrez', onclick="window.open('https://github.com/hussyrez'); return false;")
+                //-     i.fab.fa-fw.fa-twitter
+                a.btn.btn-outline-light.btn-social.mx-1(href='https://www.linkedin.com/in/mohammad-rezai/', onclick="window.open('https://www.linkedin.com/in/mohammad-rezai/'); return false;")
+                    i.fab.fa-fw.fa-linkedin-in
+                a.btn.btn-outline-light.btn-social.mx-1(href='#!', onclick="window.open('/files/resume.pdf', 'fullscreen=yes'); return false;")
+                    i.fab.fa-fw.far.fa-file-pdf
 
     // Portfolio Section
     section#portfolio.page-section.portfolio
@@ -102,12 +112,12 @@ block layout-content
                 .divider-custom-line
             // About Section Content
             .row
-                .col-lg-4.ml-auto
+                .col-lg-4.ml-auto.text-justify
                     p.lead
-                        | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
-                .col-lg-4.mr-auto
+                        |  I have gaduated from University of Adelaide with a honours degree in Bachelors of Software Engineering. During my time at UOA, I acquired knowledge in Problem-Solving, Algorithms, Data Structures, Web Development, Artifical Intelligence and Evolutionary Computing.   
+                .col-lg-4.mr-auto.text-justify
                     p.lead
-                        | You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
+                        | Currently I am working as a software engneering specialst at Telstra in Melbourne, Australia. In my first rotation, I worked in Employee Experieces team, where I was responsible for mainting the T22 roadmap website (NodeJS & Vue) and updating a SQL data base in Microsoft Azure. In Employee Experiences team, I also initiated the process to automate the T22 roadmap by suggesting SharePoint list and Azure Functions.
 
     // Contact Section
     section#contact.page-section
@@ -174,11 +184,10 @@ block layout-content
                         i.fab.fa-fw.far.fa-file-pdf
                 // Footer About Text
                 .col-lg-4
-                    h4.text-uppercase.mb-4 About Freelancer
+                    h4.text-uppercase.mb-4 About MOREZAI.NET
                     p.lead.mb-0
-                        | Freelance is a free to use, MIT licensed Bootstrap theme created by 
-                        a(href='http://startbootstrap.com') Start Bootstrap
-                        | .
+                        | A simple static site build in NodeJS & Bootstrap
+        
     // Copyright Section
     div.copyright.py-4.text-center.text-white
         .container
